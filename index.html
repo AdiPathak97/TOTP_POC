@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOTP Proof of Concept</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .qr-code img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        input {
+            margin-top: 10px;
+            padding: 8px;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>TOTP Proof of Concept</h1>
+        <button id="generate-btn">Generate Secret</button>
+
+        <div class="qr-code" id="qr-code-container"></div>
+        <p id="secret-display"></p>
+
+        <input type="text" id="token-input" placeholder="Enter TOTP Token">
+        <button id="verify-btn">Verify Token</button>
+
+        <p class="message" id="message-display"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
